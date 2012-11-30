@@ -146,6 +146,9 @@ export PATH=$PATH:~/bin:$JAVA_HOME/bin:$M2_HOME/bin:$PLAY_HOME:$MONGO_HOME/bin:$
 #Alias maven
 alias mci='mvn clean install -T8'
 alias mcit='mvn clean install -T8 -Dmaven.test.skip'
+alias mi='mvn install -T8'
+alias mit='mvn install -T8 -Dmaven.test.skip'
+
 
 #Alias git
 alias glog='git log --color --oneline --decorate --graph'
