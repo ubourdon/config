@@ -1,0 +1,24 @@
+// the cmd of the cmd
+ctrl shift a
+
+// collapse/expand code
+ctrl -
+ctrl +
+ctrl shift +/-
+
+// navigation
+alt left/right
+ctrl tab
+
+// copy
+ctrl c/x			// copy the entire line if no selection
+ctrl shift v			// paste buffer
+
+// manipule code
+ctrl shift j			// inline code
+ctrl shift top/bottom		// move line
+alt k				// surround with
+ctrl alt n			// inline variable
+
+// search
+ctrl alt f			// find usage
