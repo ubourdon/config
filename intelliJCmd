@@ -9,6 +9,7 @@ ctrl shift +/-
 // navigation
 alt left/right
 ctrl tab
+ctrl e
 
 // copy
 ctrl c/x			// copy the entire line if no selection
@@ -19,6 +20,9 @@ ctrl shift j			// inline code
 ctrl shift top/bottom		// move line
 alt k				// surround with
 ctrl alt n			// inline variable
+alt shift inser			// mode column
 
 // search
 ctrl alt f			// find usage
+
+
