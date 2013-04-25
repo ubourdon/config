@@ -25,4 +25,5 @@ alt shift inser			// mode column
 // search
 ctrl alt f			// find usage
 
-
+// action
+ctrl + o			// override member
