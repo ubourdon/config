@@ -1,0 +1,1 @@
+ps -eLf | grep Netty | wc -l               compte le nombre de thread utilisés par Netty
