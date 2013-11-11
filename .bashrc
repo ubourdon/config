@@ -119,8 +119,12 @@ function proml {
 proml
 
 
+JAVA_HOME_7_ORACLE="/usr/lib/jvm/jdk1.7.0_13"
 JAVA_HOME_7="/usr/lib/jvm/java-7-openjdk-amd64"
 JAVA_HOME_6="/usr/lib/jvm/jdk1.6.0_35"
+
+
+#export JAVA_HOME=$JAVA_HOME_6
 
 switchJHome() {
     if [ $1 = "7" ]
@@ -129,19 +133,38 @@ switchJHome() {
     elif [ $1 = "6" ]
     then echo "switch to jdk 6"; export JAVA_HOME=$JAVA_HOME_6  #$(cat ~/.bashrc | sed 's/$JAVA_HOME_7/$JAVA_HOME_7/' > ~/.toto.jdk); cp ~/.toto.jdk ~/.bashrc; rm ~/.toto.jdk;
 
-    else echo "switch only java 6 or 7"; export JAVA_HOME=$JAVA_HOME_7
+    elif [ $1 = "7O" ]
+    then echo "switch to jdk 7 oracle"; export JAVA_HOME=$JAVA_HOME_7_ORACLE
+
+    else echo "switch only java 6 or 7"; echo "use 6(jdk 6), 7(open jdk 7) or 7O (Oracle)"; export JAVA_HOME=$JAVA_HOME_6
     fi
 
     source ~/.bashrc
 }
 
 
-#export JAVA_HOME=$JAVA_HOME_7
+# autorun autojump
+. /usr/share/autojump/autojump.sh
+
+#scriptBranchVIDAL
+export createMonthly_home="/home/VALTECH/VIDAL"
+
+export MAVEN_OPTS="-Xms512m -Xmx1024m -XX:MaxPermSize=1024m"
+
 M2_HOME="/home/ubourdon/apps/apache-maven-3.0.4"
-PLAY_HOME="/home/ubourdon/apps/play-2.0.2"
+PLAY_HOME="/home/ubourdon/apps/play-2.2.0"
 MONGO_HOME="/home/ubourdon/apps/mongodb-linux-x86_64-2.0.1"
 SBT_HOME="/home/ubourdon/apps/sbt"
-export PATH=$PATH:~/bin:$JAVA_HOME/bin:$M2_HOME/bin:$PLAY_HOME:$MONGO_HOME/bin:$SBT_HOME/bin
+GATLING_HOME="/home/ubourdon/apps/gatling-charts-highcharts-1.5.2"
+
+export INSTALL4J_HOME=/home/ubourdon/apps/install4j5
+export INSTALL4J_HOME_5_1_5=/home/ubourdon/apps/install4j5_iha
+export PATH=$PATH:~/bin:$JAVA_HOME/bin:$M2_HOME/bin:$PLAY_HOME:$MONGO_HOME/bin:$SBT_HOME/bin:$INSTALL4J_HOME/bin:$INSTALL4J_HOME_5_1_5/bin:$GATLING_HOME/bin
+
+alias idea='/home/ubourdon/apps/idea-IU-129.713/bin/idea.sh'
+#'/home/ubourdon/apps/idea-IU-123.169/bin/idea.sh'
+
+alias coffee='/home/ubourdon/apps/node_modules/.bin/coffee'
 
 #Alias maven
 alias mci='mvn clean install -T8'
@@ -151,8 +174,9 @@ alias mit='mvn install -T8 -Dmaven.test.skip'
 
 
 #Alias git
-alias glog='git log --color --oneline --decorate --graph'
-alias gst='git status'
+#alias glog='git log --color --oneline --decorate --graph'
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+alias gst='git status -sb'
 alias gdiff='git diff --color'
 alias gco='git checkout'
 alias gshow='git show --name-only'
