@@ -7,23 +7,26 @@ ctrl +
 ctrl shift +/-
 
 // navigation
-alt left/right
+altgr left/right                    // move to left/right tab
+alt   left/right                    // back/forward
 ctrl tab
 ctrl e
 
 // copy
-ctrl c/x			// copy the entire line if no selection
-ctrl shift v			// paste buffer
+ctrl c/x			                      // copy the entire line if no selection
+ctrl shift v			                  // paste buffer
 
 // manipule code
-ctrl shift j			// inline code
-ctrl shift top/bottom		// move line
-alt k				// surround with
-ctrl alt n			// inline variable
-alt shift inser			// mode column
+ctrl shift j			                  // inline code
+ctrl shift top/bottom		            // move line
+alt k				                        // surround with
+ctrl alt n			                    // inline variable
+alt shift inser			                // mode column
+ctrl + shift + U                    // toLower|Upper case
 
 // search
-ctrl alt f			// find usage
+alt + u			                        // find usage
+alt + shift + u                     // find usage in file
 
 // action
-ctrl + o			// override member
+ctrl + o			                      // override member
