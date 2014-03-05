@@ -1,0 +1,53 @@
+# Intellij raccourcis (les miens) / pratiques
+
+!!!! Marche pas
+Ctrl + U			swap panel ??
+Alt + Maj + inserer		column selection mode	???
+
+### Code
+Ctrl + delete/suppr		supprime tout un mot
+
+Ctrl + Alt + K			surround with
+
+Alt + flèche du haut		remonte à la méthode au-dessus
+
+Ctrl + J			insert live template
+Ctrl + Alt + J			surround with live template
+Ctrl + Maj + J			join lines (à partir ligne du dessus)
+
+Ctrl + Alt + I			auto-indent lines
+Ctrl + Alt + O			organize import
+
+Ctrl + Maj + Bas		move statement down
+Ctrl + Maj + Haut		move statement up
+
+Alt + inserer			generer méthodes (getter/setter)
+
+Maj + entree			créer nouvelle ligne
+
+Ctrl + Maj + U			to lower / to upper case
+
+Ctrl + Y			dupliquer ligne 		
+
+Alt + F7			find usage	!??!
+Ctrl + Alt + F7			show usage	??
+Ctrl + F7			find usage in file
+Ctrl + Maj + F7			highlight usage in file
+
+Alt + Maj + Insert		column selection mode
+
+### refactor
+Maj + F6			rename
+Ctrl + F6			change signature
+Ctrl + Maj + F6			type migration
+
+Ctrl + Alt + V			introduce variable
+Ctrl + Alt + C			introduce constant
+Ctrl + Alt + F			introduce field
+Ctrl + Alt + P			introduce parameter
+Ctrl + Alt + N			inline
+Ctrl + Alt + M			extract method
+
+### test
+Ctrl + Maj + T			navigate test to implementation
+Ctrl + T			compile (necessary to run infinitest)
